@@ -12,6 +12,7 @@ body {
 h1 {
   animation: desplazamiento 2s ease-in-out;
   color: 222831;
+  text-align: center;
 }
 h2 {
     /* Decoración */
