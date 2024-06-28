@@ -8,36 +8,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <h2 id="Elementos_formulario">Elementos de un formulario</h2><br>
-    <h3>Elementos de Formulario</h3><br>
-    <input type="text"><br>
-    <input type="checkbox"><br>
-    <input type="radio"><br>
-    <input type="date"><br> 
-    <input type="color"><br>
-    <input type="button"><br>
-    <input type="submit"><br>
-    <input type="reset"><br>
-    <input type="file"><br>
-    <input type="file" multiple><br>
-    <input type="hidden" name="idioma" value="es"><br>
-    <input type="email"><br>
-    <input type="number"><br>
-    <input type="tel"><br>
-    <input type="password"><br>
-    <input type="search"><br>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <textarea cols="50" rows="5"></textarea><br>
-    <select name="" id="">
-    <option value="">HTML</option>
-    <option value="">CSS</option>
-    <option value="">JS</option>
-    </select>
-    <select name="" id="" multiple>
-        <option value="">HTML</option>
-        <option value="">CSS</option>
-        <option value="">JS</option>
-    </select>
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="principal.html#Temario">Barra de navegación</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="principal.html#inicio">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="form.html">Formularios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="landing.html">Info</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">links</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="principal.html#Telefono">Contacto</a></li>
+                  <li><a class="dropdown-item" href="principal.html#audio-video">Video</a></li>
+                  <li><a class="dropdown-item" href="principal.html#iframe">Paginas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <h2 id="Formularios">Formularios</h2>
     <br>
     <div class="container">
@@ -88,10 +87,10 @@
             <button type="reset" class="btn btn-default">Reset</button>
           </div>
         </div>
-      </form>
-      <br>
-      <h3>Formulario de seleccion</h3>
-      <form class="form-horizontal">
+    </form>
+    <br>
+    <h3>Formulario de seleccion</h3>
+    <form class="form-horizontal">
         <div class="form-group">
           <label for="lenguaje" class="col-sm-2 control-label">Elige tu lenguaje de programación favorito:</label>
           <div class="col-sm-10">
@@ -118,7 +117,23 @@
             <button type="reset" class="btn btn-default">Reset</button>
           </div>
         </div>
-      </form>
+    </form>
+    <h2>Formulario de para enviar correo</h2>
+    <form action="https://formsubmit.co/facucabrevil@gmail.com" method="POST">
+        <div class="form-group">
+          <label for="nombre">Escribe tu nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíóóÚúÜü\s]+$" title="El nombre solo acepta letras y espacios en blanco" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Escribe tu correo</label>
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="Escribe tu correo" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Formato de correo invalido" required>
+        </div>
+        <div class="form-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea class="form-control" id="comentarios" name="comentarios" cols="30" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
     document.querySelector('.password-toggle-icon').addEventListener('click', function() {
