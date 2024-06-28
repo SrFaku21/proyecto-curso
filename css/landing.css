@@ -1,0 +1,68 @@
+body {
+    background-color: #2c2c2c;
+}
+section {
+    width: 90%;
+    max-width: 1600px;
+    height: 500px;
+    /* border: 1px solid #fff; */
+    margin: 50px auto;
+}
+#fila {
+    width: 100%;
+    display: flex;
+}
+#foto {
+    width: 28%;
+}
+#info {
+    width: 72%;
+}
+#info h2 {
+    color: #00f29e;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Fugaz One";
+    margin-bottom: 0;
+}
+#info h1 {
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Fugaz One";
+    margin: 0;
+}
+#info .detalles {
+    width: 150px;
+    height: 4px;
+    background: #00f29e;
+}
+#info p {
+    color: #fff;
+    font-size: 15px;
+    margin: 30px;
+}
+section {
+    width: 90%;
+    max-width: 1600px;
+    height: 500px;
+    margin: 50px auto;
+}
+#info article {
+    border: 3px solid #00f29e;
+    width: 50%;
+
+}
+article ul li {
+    color: #fff;
+    font-size: 20px;
+    list-style: none;
+    width: 48%;
+    display: inline-block;
+}
+#info .redes {
+    margin: 30px 0;
+}
+#info .redes a {
+    margin: 0 15px;
+}
