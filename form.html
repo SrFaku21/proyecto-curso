@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <h2 id="Elementos_formulario">Elementos de un formulario</h2><br>
+    <h3>Elementos de Formulario</h3><br>
+    <input type="text"><br>
+    <input type="checkbox"><br>
+    <input type="radio"><br>
+    <input type="date"><br> 
+    <input type="color"><br>
+    <input type="button"><br>
+    <input type="submit"><br>
+    <input type="reset"><br>
+    <input type="file"><br>
+    <input type="file" multiple><br>
+    <input type="hidden" name="idioma" value="es"><br>
+    <input type="email"><br>
+    <input type="number"><br>
+    <input type="tel"><br>
+    <input type="password"><br>
+    <input type="search"><br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <textarea cols="50" rows="5"></textarea><br>
+    <select name="" id="">
+    <option value="">HTML</option>
+    <option value="">CSS</option>
+    <option value="">JS</option>
+    </select>
+    <select name="" id="" multiple>
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JS</option>
+    </select>
+    <h2 id="Formularios">Formularios</h2>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h3>Formulario de login</h3>
+          <form action="" target="_blank">
+            <div class="form-group">
+              <label for="usuario">Usuario</label>
+              <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su usuario">
+            </div>
+            <div class="form-group">
+              <label for="contraseña">Contraseña</label>
+              <div class="password-toggle">
+                <input type="password" class="form-control" id="password-input" name="contraseña" placeholder="Ingrese su contraseña">
+                <label for="password-toggle-icon" class="password-toggle-icon">
+                  <i class="fas fa-eye"></i>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+              <button type="reset" class="btn btn-secondary">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <h3>Formulario de idioma</h3>
+    <br>
+    <form class="form-horizontal">
+        <div class="form-group">
+          <label for="idioma" class="col-sm-2 control-label">Elige tu idioma:</label>
+          <div class="col-sm-10">
+            <select name="idioma" class="form-control">
+              <option value="">Elige una opción</option>
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+              <option value="fr">Francés</option>
+              <option value="it">Italiano</option>
+              <option value="pt">Portugués</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+          </div>
+        </div>
+      </form>
+      <br>
+      <h3>Formulario de seleccion</h3>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="lenguaje" class="col-sm-2 control-label">Elige tu lenguaje de programación favorito:</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="lenguaje" id="radio-js" value="js"> JavaScript
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="lenguaje" id="radio-py" value="py"> Python
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="lenguaje" id="radio-php" value="php"> PHP
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+          </div>
+        </div>
+      </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    document.querySelector('.password-toggle-icon').addEventListener('click', function() {
+        var passwordInput = document.querySelector('#password-input');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            this.querySelector('i').classList.remove('fa-eye');
+            this.querySelector('i').classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            this.querySelector('i').classList.remove('fa-eye-slash');
+            this.querySelector('i').classList.add('fa-eye');
+        }
+    });
+    </script>
+</body>
+</html>
