@@ -1,11 +1,68 @@
 body {
     padding-top: 56px;
 }
-.body {
-    background: rgb(34, 40, 49);
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-p {
-    color: rgb(238, 238, 238);
+h1 {
+  animation: desplazamiento 2s ease-in-out;
+  color: 222831;
+}
+h2 {
+    /* Decoración */
+    background-color: #f7f7f7; /* Fondo claro */
+    padding: 10px; /* Espacio entre el texto y el borde */
+    border-bottom: 2px solid #ccc; /* Borde inferior */
+    margin-bottom: 20px; /* Espacio entre títulos */
+  
+    /* Animación */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+  }
+  
+  h2:hover {
+    /* Efecto al pasar el mouse */
+    background-color: #fff; /* Fondo blanco */
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  h2::before {
+    /* Icono antes del título */
+    content: "\25B6"; /* Icono de flecha hacia abajo */
+    font-size: 18px;
+    margin-right: 10px;
+    color: #666; /* Color del icono */
+  }
+  
+  h2::after {
+    /* Línea debajo del título */
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #ccc; /* Color de la línea */
+    margin-top: 10px;
+}
+a:link {
+  text-decoration: none;
+  color: #55d2ff;
+}
+a:visited {
+  color: #660085;
+}
+
+a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #009900;
 }
 .centrar {
     text-align: center;
